@@ -1,12 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://c7f4c4v4vbxxq"]
+[gd_scene load_steps=3 format=3 uid="uid://ck4ujlubaiw33"]
 
-[ext_resource type="Script" path="res://Assets/Scripts/MainMenu.gd" id="1_e5hmj"]
+[ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="1_epj1j"]
 [ext_resource type="Texture2D" uid="uid://cljquuocvplyv" path="res://Assets/main_menu.png" id="2_xrvk1"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_e5hmj")
+script = ExtResource("1_epj1j")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
