@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://bwf4rvnpssvex"]
+[gd_scene load_steps=3 format=3 uid="uid://c8d7s8hi0lqev"]
 
 [ext_resource type="Script" path="res://Scripts/SettingScreen.gd" id="1_dg5ts"]
 [ext_resource type="Texture2D" uid="uid://4qlulc0nd27e" path="res://Assets/Setting.png" id="2_c0ctj"]

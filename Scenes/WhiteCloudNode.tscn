@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://dig6rhnsj6dn3"]
+
+[ext_resource type="Script" path="res://Scripts/WhiteCloud.gd" id="1_ldhli"]
+[ext_resource type="Texture2D" uid="uid://8w1gmk5ei6gk" path="res://Assets/white_cloud.png" id="2_vagdm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_72bfr"]
+radius = 215.827
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0a3q8"]
+radius = 12.9543
+
+[node name="WhiteCloudNode" type="Node2D"]
+script = ExtResource("1_ldhli")
+
+[node name="WhiteCloud" type="CharacterBody2D" parent="."]
+scale = Vector2(0.790244, 0.711854)
+
+[node name="WhiteCloudSprite" type="Sprite2D" parent="WhiteCloud"]
+position = Vector2(430, 286.906)
+texture = ExtResource("2_vagdm")
+offset = Vector2(2.08165e-12, 2.08165e-12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WhiteCloud"]
+position = Vector2(419.931, 294.433)
+rotation = -0.47822
+scale = Vector2(1.05655, 1.20023)
+skew = -0.464258
+shape = SubResource("CircleShape2D_72bfr")
+
+[node name="Area2D" type="Area2D" parent="WhiteCloud"]
+scale = Vector2(0.997866, 1.15617)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WhiteCloud/Area2D"]
+position = Vector2(423.63, 256.043)
+rotation = -0.345575
+scale = Vector2(17.6283, -18.8575)
+skew = -0.598648
+shape = SubResource("CircleShape2D_0a3q8")
+
+[connection signal="area_entered" from="WhiteCloud/Area2D" to="." method="_on_area_2d_area_entered"]

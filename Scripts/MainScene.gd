@@ -1,10 +1,10 @@
 extends Node2D
 
 @onready var Score: RichTextLabel = $Score
-@onready var WhiteCloud = get_node("WhiteCloud/WhiteCloudSprite")
+var WhiteCloud = preload("res://Scenes/WhiteCloudNode.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	randomize()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -18,8 +18,10 @@ func _unhandled_input(event):
 
 
 func _on_timer_timeout():
-	spawn_circles()
+	spawn_white_clouds()
 
-func spawn_circles():
-	var white_cloud = WhiteCloud.instance()
-	add_child(white_cloud)
+func spawn_white_clouds():
+	var create_white_cloud=WhiteCloud.instantiate()
+	add_child(create_white_cloud)
+	create_white_cloud.position.y=randi()%400+150
+	create_white_cloud.position.x=randi()%400+150
