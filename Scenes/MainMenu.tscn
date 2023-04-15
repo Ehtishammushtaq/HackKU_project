@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7f4c4v4vbxxq"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/MainMenu.gd" id="1_e5hmj"]
+[ext_resource type="Texture2D" uid="uid://cljquuocvplyv" path="res://Assets/main_menu.png" id="2_xrvk1"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_e5hmj")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 12.0
+offset_right = 1934.0
+offset_bottom = 1092.0
+texture = ExtResource("2_xrvk1")
+
+[node name="NewGame" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 219.0
+offset_top = 589.0
+offset_right = 504.0
+offset_bottom = 657.0
+rotation = 0.0488692
+
+[node name="Scores" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 208.0
+offset_top = 772.0
+offset_right = 493.0
+offset_bottom = 840.0
+rotation = 0.0488692
+
+[node name="Setting" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 211.0
+offset_top = 689.0
+offset_right = 489.0
+offset_bottom = 754.0
+rotation = -0.0122173
+
+[node name="Exit" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 200.0
+offset_top = 877.0
+offset_right = 478.0
+offset_bottom = 942.0
+rotation = -0.0122173
+
+[connection signal="pressed" from="NewGame" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="Setting" to="." method="_on_setting_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
