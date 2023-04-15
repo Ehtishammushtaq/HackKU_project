@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://u3b84kjjrp71"]
+
+[node name="StartScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0

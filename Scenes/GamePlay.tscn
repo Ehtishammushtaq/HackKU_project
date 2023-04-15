@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c03qx30gdd16c"]
+
+[ext_resource type="Texture2D" uid="uid://jrab7qc1thcm" path="res://Assets/Rocket.png" id="1_0lgl1"]
+[ext_resource type="Script" path="res://Scenes/Scripts/GamePlay.gd" id="1_ga2ig"]
+
+[node name="GamePlay" type="Node2D"]
+script = ExtResource("1_ga2ig")
+
+[node name="Rocket" type="TextureRect" parent="."]
+offset_left = -6.0
+offset_top = 408.0
+offset_right = 2089.0
+offset_bottom = 2808.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_0lgl1")
