@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bp4s1xvt1tif3"]
+
+[ext_resource type="Texture2D" uid="uid://dgeot1whtpl2v" path="res://Assets/Credits.png" id="1_87ama"]
+[ext_resource type="Script" path="res://Scripts/EndCredits.gd" id="1_s7nvl"]
+
+[node name="EndCredits" type="Node2D"]
+script = ExtResource("1_s7nvl")
+
+[node name="Texture" type="TextureRect" parent="."]
+offset_right = 1925.0
+offset_bottom = 1081.0
+texture = ExtResource("1_87ama")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 1793.0
+offset_top = 22.0
+offset_right = 1899.0
+offset_bottom = 109.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

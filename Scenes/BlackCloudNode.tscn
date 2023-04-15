@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://dek7j2fpf5tfr"]
+
+[ext_resource type="Texture2D" uid="uid://b3ocfejkhxd7q" path="res://Assets/WC.png" id="1_3idj0"]
+[ext_resource type="Script" path="res://Scripts/BlackCloudNode.gd" id="1_8xp8e"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k1n2q"]
+radius = 134.141
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mg30c"]
+radius = 7.9409
+
+[node name="BlackCloudNode" type="Node2D"]
+script = ExtResource("1_8xp8e")
+
+[node name="BlackCloud" type="CharacterBody2D" parent="."]
+position = Vector2(884, -509)
+scale = Vector2(0.790244, 0.711854)
+
+[node name="BlackCloudSprite" type="Sprite2D" parent="BlackCloud"]
+modulate = Color(0, 0, 0, 0.901961)
+position = Vector2(430, 286.906)
+scale = Vector2(0.76, 0.76)
+texture = ExtResource("1_3idj0")
+offset = Vector2(2.08165e-12, 2.08165e-12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlackCloud"]
+position = Vector2(419.931, 294.433)
+rotation = -0.47822
+scale = Vector2(1.05655, 1.20023)
+skew = -0.464258
+shape = SubResource("CircleShape2D_k1n2q")
+
+[node name="Area2D" type="Area2D" parent="BlackCloud"]
+scale = Vector2(0.997866, 1.15617)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlackCloud/Area2D"]
+position = Vector2(416.047, 256.492)
+rotation = -0.345575
+scale = Vector2(17.6283, -18.8575)
+skew = -0.598648
+shape = SubResource("CircleShape2D_mg30c")
+
+[connection signal="area_entered" from="BlackCloud/Area2D" to="." method="_on_area_2d_area_entered"]

@@ -1,23 +1,26 @@
 [gd_scene load_steps=5 format=3 uid="uid://dig6rhnsj6dn3"]
 
 [ext_resource type="Script" path="res://Scripts/WhiteCloud.gd" id="1_ldhli"]
-[ext_resource type="Texture2D" uid="uid://8w1gmk5ei6gk" path="res://Assets/white_cloud.png" id="2_vagdm"]
+[ext_resource type="Texture2D" uid="uid://b3ocfejkhxd7q" path="res://Assets/WC.png" id="2_v204c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_72bfr"]
-radius = 215.827
+radius = 134.141
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0a3q8"]
-radius = 12.9543
+radius = 7.9409
 
 [node name="WhiteCloudNode" type="Node2D"]
 script = ExtResource("1_ldhli")
 
 [node name="WhiteCloud" type="CharacterBody2D" parent="."]
+position = Vector2(1013, 21)
 scale = Vector2(0.790244, 0.711854)
 
 [node name="WhiteCloudSprite" type="Sprite2D" parent="WhiteCloud"]
+modulate = Color(1, 1, 1, 0.901961)
 position = Vector2(430, 286.906)
-texture = ExtResource("2_vagdm")
+scale = Vector2(0.76, 0.76)
+texture = ExtResource("2_v204c")
 offset = Vector2(2.08165e-12, 2.08165e-12)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WhiteCloud"]
@@ -31,7 +34,7 @@ shape = SubResource("CircleShape2D_72bfr")
 scale = Vector2(0.997866, 1.15617)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WhiteCloud/Area2D"]
-position = Vector2(423.63, 256.043)
+position = Vector2(408.479, 259.073)
 rotation = -0.345575
 scale = Vector2(17.6283, -18.8575)
 skew = -0.598648

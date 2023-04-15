@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://b101xch0p6lcy"]
+[gd_scene load_steps=6 format=3 uid="uid://b101xch0p6lcy"]
 
 [ext_resource type="PackedScene" uid="uid://br8nnfe7w5p5o" path="res://Scenes/Parallax.tscn" id="1_of0vv"]
 [ext_resource type="Script" path="res://Scripts/MainScene.gd" id="1_s4una"]
 [ext_resource type="PackedScene" uid="uid://j0xnb5n1jj81" path="res://Scenes/Player.tscn" id="2_55sfj"]
 [ext_resource type="PackedScene" uid="uid://dig6rhnsj6dn3" path="res://Scenes/WhiteCloudNode.tscn" id="3_in0vb"]
+[ext_resource type="PackedScene" uid="uid://dek7j2fpf5tfr" path="res://Scenes/BlackCloudNode.tscn" id="4_5ye32"]
 
 [node name="MainScene" type="Node2D"]
 script = ExtResource("1_s4una")
@@ -11,7 +12,10 @@ script = ExtResource("1_s4una")
 [node name="Parallax" parent="." instance=ExtResource("1_of0vv")]
 
 [node name="WhiteCloudNode" parent="." instance=ExtResource("3_in0vb")]
-position = Vector2(567, 509)
+position = Vector2(409, 670)
+
+[node name="BlackCloudNode" parent="." instance=ExtResource("4_5ye32")]
+position = Vector2(533, 660)
 
 [node name="Player" parent="." instance=ExtResource("2_55sfj")]
 z_index = 1
@@ -26,7 +30,7 @@ theme_override_font_sizes/normal_font_size = 70
 text = "0"
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 1.033
+wait_time = 4.0
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -46,4 +46,6 @@ offset_top = 388.0
 offset_right = 1108.0
 offset_bottom = 474.0
 
+[connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Control" to="." method="_on_control_pressed"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

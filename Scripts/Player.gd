@@ -23,10 +23,3 @@ func _process(delta):
 		TW.parallel().tween_property(Character, "position", Vector2(my_position.x-change, my_position.y), 0.01)
 	#else:
 		#TW.parallel().tween_property(Rocket, "position", Vector2(100, 600), 1)
-
-
-func _on_timer_timeout():
-	print("timer timed out")
-
-func _on_area_2d_area_entered(area):
-	print("rockter touched ")
