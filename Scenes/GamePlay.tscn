@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://c03qx30gdd16c"]
+[gd_scene load_steps=7 format=3 uid="uid://c03qx30gdd16c"]
 
 [ext_resource type="Texture2D" uid="uid://jrab7qc1thcm" path="res://Assets/Rocket.png" id="1_0lgl1"]
 [ext_resource type="Script" path="res://Scenes/Scripts/GamePlay.gd" id="1_ga2ig"]
+[ext_resource type="Texture2D" uid="uid://1rookhofqw5b" path="res://Assets/Backgound.jpeg" id="2_4y4sl"]
 [ext_resource type="Texture2D" uid="uid://di2gqe5ehhct2" path="res://Assets/Circle.png" id="3_oytbl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3074j"]
@@ -13,29 +14,53 @@ radius = 221.779
 [node name="GamePlay" type="Node2D"]
 script = ExtResource("1_ga2ig")
 
-[node name="Rocket" type="TextureRect" parent="."]
-offset_left = -6.0
-offset_top = 408.0
-offset_right = 2089.0
-offset_bottom = 2808.0
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(960, 540)
+motion_mirroring = Vector2(1920, 2.08165e-12)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(2.08165e-12, 9)
+scale = Vector2(1.00365, 1.01667)
+texture = ExtResource("2_4y4sl")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 6.0
+autostart = true
+
+[node name="Rocket" type="CharacterBody2D" parent="."]
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("1_0lgl1")
 
 [node name="Area2D" type="Area2D" parent="Rocket"]
+position = Vector2(970, 4900)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Rocket/Area2D"]
-position = Vector2(1100, 1150)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rocket"]
+position = Vector2(1100, 4830)
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_3074j")
 
+[node name="Camera2D" type="Camera2D" parent="Rocket"]
+position = Vector2(1100, 4830)
+scale = Vector2(1, 1)
+offset = Vector2(1920, 1080)
+
+[node name="Sprite2D" type="Sprite2D" parent="Rocket"]
+position = Vector2(1200, 4710)
+scale = Vector2(1, 1)
+texture = ExtResource("1_0lgl1")
+
 [node name="Circle" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_oytbl")
 offset = Vector2(1000, 500)
 
 [node name="Area2D" type="Area2D" parent="Circle"]
+position = Vector2(-10, -14)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Circle/Area2D"]
-position = Vector2(1007, 502)
+position = Vector2(1002, 502)
 shape = SubResource("CircleShape2D_6l6bf")
 
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="area_entered" from="Circle/Area2D" to="." method="_on_area_2d_area_entered"]

@@ -1,5 +1,5 @@
 extends Node2D
-@onready var Rocket: TextureRect = $Rocket
+@onready var Rocket: CharacterBody2D = $Rocket
 @onready var Circle: Sprite2D = $Circle
 var is_held = false
 var change=10
@@ -27,3 +27,7 @@ func _process(delta):
 
 func _on_area_2d_area_entered(area):
 	Circle.free()
+
+
+func _on_timer_timeout():
+	print("timer timed out")
