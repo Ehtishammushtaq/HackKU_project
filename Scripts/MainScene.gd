@@ -40,7 +40,7 @@ func spawn_white_clouds():
 	var create_white_cloud=WhiteCloud.instantiate()
 	add_child(create_white_cloud)
 	create_white_cloud.position.y=randi()%700+40
-	create_white_cloud.position.x = 1950
+	create_white_cloud.position.x = 2000
 
 func spawn_black_clouds():
 	randomChooser = randi()%2
@@ -50,4 +50,4 @@ func spawn_black_clouds():
 		var create_black_cloud=BlackCloud.instantiate()
 		add_child(create_black_cloud)
 		create_black_cloud.position.y=randi()%600+20
-		create_black_cloud.position.x = 1950
+		create_black_cloud.position.x = 2000
