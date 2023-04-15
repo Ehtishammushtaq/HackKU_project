@@ -25,7 +25,6 @@ texture = ExtResource("1_0lgl1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Rocket/Area2D"]
 position = Vector2(1100, 1150)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_3074j")
 
 [node name="Circle" type="Sprite2D" parent="."]
