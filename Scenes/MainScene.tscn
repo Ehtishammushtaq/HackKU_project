@@ -12,10 +12,10 @@ script = ExtResource("1_s4una")
 [node name="Parallax" parent="." instance=ExtResource("1_of0vv")]
 
 [node name="WhiteCloudNode" parent="." instance=ExtResource("3_in0vb")]
-position = Vector2(409, 670)
+position = Vector2(2109, 382)
 
 [node name="BlackCloudNode" parent="." instance=ExtResource("4_5ye32")]
-position = Vector2(533, 660)
+position = Vector2(2455, 650)
 
 [node name="Player" parent="." instance=ExtResource("2_55sfj")]
 z_index = 1

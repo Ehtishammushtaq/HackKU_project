@@ -1,6 +1,6 @@
 extends Node2D
 @onready var BlackCloud: CharacterBody2D = $BlackCloud
-var change = 0.3
+var change = 5
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.

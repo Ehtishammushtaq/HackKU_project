@@ -13,11 +13,12 @@ radius = 7.9409
 script = ExtResource("1_8xp8e")
 
 [node name="BlackCloud" type="CharacterBody2D" parent="."]
-position = Vector2(884, -509)
+position = Vector2(-330, -212)
 scale = Vector2(0.790244, 0.711854)
 
 [node name="BlackCloudSprite" type="Sprite2D" parent="BlackCloud"]
 modulate = Color(0, 0, 0, 0.901961)
+z_index = 1
 position = Vector2(430, 286.906)
 scale = Vector2(0.76, 0.76)
 texture = ExtResource("1_3idj0")
@@ -31,7 +32,9 @@ skew = -0.464258
 shape = SubResource("CircleShape2D_k1n2q")
 
 [node name="Area2D" type="Area2D" parent="BlackCloud"]
+position = Vector2(2.08165e-12, 2.08165e-12)
 scale = Vector2(0.997866, 1.15617)
+collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BlackCloud/Area2D"]
 position = Vector2(416.047, 256.492)

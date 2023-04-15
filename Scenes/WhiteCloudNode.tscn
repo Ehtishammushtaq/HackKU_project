@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b3ocfejkhxd7q" path="res://Assets/WC.png" id="2_v204c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_72bfr"]
-radius = 134.141
+radius = 147.354
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0a3q8"]
 radius = 7.9409
@@ -13,7 +13,7 @@ radius = 7.9409
 script = ExtResource("1_ldhli")
 
 [node name="WhiteCloud" type="CharacterBody2D" parent="."]
-position = Vector2(1013, 21)
+position = Vector2(-314, -219)
 scale = Vector2(0.790244, 0.711854)
 
 [node name="WhiteCloudSprite" type="Sprite2D" parent="WhiteCloud"]
@@ -24,7 +24,7 @@ texture = ExtResource("2_v204c")
 offset = Vector2(2.08165e-12, 2.08165e-12)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WhiteCloud"]
-position = Vector2(419.931, 294.433)
+position = Vector2(408.701, 300.621)
 rotation = -0.47822
 scale = Vector2(1.05655, 1.20023)
 skew = -0.464258
@@ -32,6 +32,7 @@ shape = SubResource("CircleShape2D_72bfr")
 
 [node name="Area2D" type="Area2D" parent="WhiteCloud"]
 scale = Vector2(0.997866, 1.15617)
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WhiteCloud/Area2D"]
 position = Vector2(408.479, 259.073)

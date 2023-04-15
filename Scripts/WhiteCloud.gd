@@ -1,7 +1,8 @@
 extends Node2D
 @onready var WhiteCloud: CharacterBody2D = $WhiteCloud
 @onready var Player: Node2D = $Player
-var change = 0.1
+var change = 5
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Global.WhiteCloudPosition = WhiteCloud.position
@@ -17,8 +18,7 @@ func _process(delta):
 		WhiteCloud.position.x -= 1 + change
 
 func _on_area_2d_area_entered(area):
-	print("cloud toucuhed")
+	print(Global.score)
 	Global.score+=1
 	WhiteCloud.free()
-	
 	
