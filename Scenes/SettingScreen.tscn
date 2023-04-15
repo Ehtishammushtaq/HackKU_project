@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfsftvrcu24v0"]
+
+[ext_resource type="Script" path="res://Scripts/SettingScreen.gd" id="1_dg5ts"]
+[ext_resource type="Texture2D" uid="uid://4qlulc0nd27e" path="res://Assets/Setting.png" id="2_c0ctj"]
+
+[node name="SettingsScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_dg5ts")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1919.0
+offset_bottom = 1073.0
+texture = ExtResource("2_c0ctj")
+
+[node name="Credits" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 822.0
+offset_top = 613.0
+offset_right = 1107.0
+offset_bottom = 699.0
+
+[node name="Control" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 820.0
+offset_top = 499.0
+offset_right = 1105.0
+offset_bottom = 585.0
+
+[node name="Back" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 1707.0
+offset_top = 30.0
+offset_right = 1863.0
+offset_bottom = 95.0
+
+[node name="Sound" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 823.0
+offset_top = 388.0
+offset_right = 1108.0
+offset_bottom = 474.0
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
