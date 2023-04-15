@@ -1,6 +1,6 @@
 extends Node2D
 @onready var Rocket: TextureRect = $Rocket
-
+@onready var Circle: Sprite2D = $Circle
 var is_held = false
 var change=10
 # Called when the node enters the scene tree for the first time.
@@ -23,3 +23,7 @@ func _process(delta):
 		TW.parallel().tween_property(Rocket, "position", Vector2(100, 850), 1)
 
 		
+
+
+func _on_area_2d_area_entered(area):
+	Circle.free()

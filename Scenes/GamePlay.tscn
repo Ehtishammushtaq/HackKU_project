@@ -1,7 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://c03qx30gdd16c"]
+[gd_scene load_steps=6 format=3 uid="uid://c03qx30gdd16c"]
 
 [ext_resource type="Texture2D" uid="uid://jrab7qc1thcm" path="res://Assets/Rocket.png" id="1_0lgl1"]
 [ext_resource type="Script" path="res://Scenes/Scripts/GamePlay.gd" id="1_ga2ig"]
+[ext_resource type="Texture2D" uid="uid://di2gqe5ehhct2" path="res://Assets/Circle.png" id="3_oytbl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3074j"]
+size = Vector2(1650, 2460)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6l6bf"]
+radius = 221.779
 
 [node name="GamePlay" type="Node2D"]
 script = ExtResource("1_ga2ig")
@@ -13,3 +20,22 @@ offset_right = 2089.0
 offset_bottom = 2808.0
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_0lgl1")
+
+[node name="Area2D" type="Area2D" parent="Rocket"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rocket/Area2D"]
+position = Vector2(1100, 1150)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_3074j")
+
+[node name="Circle" type="Sprite2D" parent="."]
+texture = ExtResource("3_oytbl")
+offset = Vector2(1000, 500)
+
+[node name="Area2D" type="Area2D" parent="Circle"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Circle/Area2D"]
+position = Vector2(1007, 502)
+shape = SubResource("CircleShape2D_6l6bf")
+
+[connection signal="area_entered" from="Circle/Area2D" to="." method="_on_area_2d_area_entered"]
