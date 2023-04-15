@@ -3,9 +3,11 @@ extends Node2D
 @onready var Circle: Sprite2D = $Circle
 var is_held = false
 var change=10
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Rocket.position = Vector2(100,850)
+	Rocket.position = Vector2(100,600)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -19,16 +21,12 @@ func _process(delta):
 		TW.parallel().tween_property(Rocket, "position", Vector2(my_position.x+change, my_position.y), 0.01)
 	elif Input.is_action_pressed("ui_left"):
 		TW.parallel().tween_property(Rocket, "position", Vector2(my_position.x-change, my_position.y), 0.01)
-	else:
-		TW.parallel().tween_property(Rocket, "position", Vector2(100, 850), 1)
-
-		#this is a comment
-		
-
-
-func _on_area_2d_area_entered(area):
-	Circle.free()
+	#else:
+		#TW.parallel().tween_property(Rocket, "position", Vector2(100, 600), 1)
 
 
 func _on_timer_timeout():
 	print("timer timed out")
+
+func _on_area_2d_area_entered(area):
+	print("rockter enterned ")
