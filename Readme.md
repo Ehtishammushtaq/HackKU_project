@@ -10,7 +10,7 @@ Welcome to Meadowbrook, a unique flying adventure game that takes you through ch
 - Canva
 
 ## Installation and Usage
-To run the game, simply download and run the executable file provided in this folder. 
+To run the game, simply download and run the executable file provided in the Exe folder. 
 
 ## Controls
 Use the direction arrow keys to move the pilot accordingly.
