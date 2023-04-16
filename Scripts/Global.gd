@@ -4,6 +4,7 @@ var WhiteCloudPosition
 var health = 0
 var TopWallTouched=false
 var BottomWallTouched=false
+@onready var MainMenuMusic: AudioStreamPlayer2D = $MainMenuMusic
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
