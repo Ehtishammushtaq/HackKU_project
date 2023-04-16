@@ -7,11 +7,10 @@
 script = ExtResource("1_i0blv")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -5.0
-offset_top = 5.0
-offset_right = 1915.0
-offset_bottom = 1085.0
-scale = Vector2(0.995096, 0.998309)
+offset_left = -4.0
+offset_right = 1916.0
+offset_bottom = 1080.0
+scale = Vector2(1.00206, 1.00808)
 texture = ExtResource("2_nb1nm")
 
 [node name="YesButton" type="Button" parent="."]
