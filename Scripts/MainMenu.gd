@@ -3,7 +3,10 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	if MainMenuMusic.Mplay == true:
+		pass
+	else:
+		MainMenuMusic._play_music()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

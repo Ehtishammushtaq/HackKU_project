@@ -7,6 +7,13 @@ var randomChooser=0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	randomize()
+	if MainMenuMusic.Mplay == true:
+		MainMenuMusic._stop_music()
+		SpringGameMusic._springplay_music()
+	else:
+		MainMenuMusic._play_music()
+
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -51,3 +58,8 @@ func spawn_black_clouds():
 		add_child(create_black_cloud)
 		create_black_cloud.position.y=randi()%600+20
 		create_black_cloud.position.x = 2000
+
+
+func _on_tree_exited():
+	SpringGameMusic._springstop_music()
+
