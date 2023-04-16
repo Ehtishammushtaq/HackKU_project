@@ -20,6 +20,7 @@ func _process(delta):
 		a.queue_free()
 	elif Global.health==0 and OneHP != null:
 		var a = self.get_node("OneHP")
-		get_tree().change_scene_to_file("res://Scenes/MainMenu.tscn")
+		get_tree().change_scene_to_file("res://Scenes/GameOverNode.tscn")
 		a.queue_free()
+		
 		
