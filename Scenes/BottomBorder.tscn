@@ -1,19 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://cm4ogwkah2vkh"]
+[gd_scene load_steps=3 format=3 uid="uid://cyo8um07qrhih"]
 
-[ext_resource type="Script" path="res://Scripts/TopBorder.gd" id="1_ukj6f"]
+[ext_resource type="Script" path="res://Scripts/BottomBorder.gd" id="1_fektw"]
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_e5qim"]
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_j6xr4"]
 a = Vector2(-2, -34)
 b = Vector2(1918, -33)
 
-[node name="TopBorder" type="Node2D"]
-script = ExtResource("1_ukj6f")
+[node name="BottomBorder" type="Node2D"]
+script = ExtResource("1_fektw")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, 34)
-shape = SubResource("SegmentShape2D_e5qim")
+position = Vector2(10, 1109)
+shape = SubResource("SegmentShape2D_j6xr4")
 one_way_collision = true
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

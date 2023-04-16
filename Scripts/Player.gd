@@ -12,12 +12,14 @@ func _ready():
 func _process(delta):
 	var my_position = Character.position
 	var TW = create_tween().set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_IN_OUT)
+	TW.tween_property(Character, "position", Vector2(my_position.x+xchange, my_position.y), 0.01)
+	
 	if Input.is_action_pressed("ui_up"):
-		TW.tween_property(Character, "position", Vector2(my_position.x, my_position.y-ychange), 0.01)
-		TW.tween_property(Character, "position", Vector2(my_position.x+xchange, my_position.y), 0.01)
+		if Global.TopWallTouched == false:
+			TW.tween_property(Character, "position", Vector2(my_position.x, my_position.y-ychange), 0.01)
 	elif Input.is_action_pressed("ui_down"):
-		TW.tween_property(Character, "position", Vector2(my_position.x, my_position.y+ychange), 0.01)
-		TW.tween_property(Character, "position", Vector2(my_position.x+xchange, my_position.y), 0.01)
+		if Global.BottomWallTouched== false:
+			TW.tween_property(Character, "position", Vector2(my_position.x, my_position.y+ychange), 0.01)
 	elif Input.is_action_pressed("ui_right"):
 		TW.tween_property(Character, "position", Vector2(my_position.x+xchange, my_position.y), 0.01)
 	else:

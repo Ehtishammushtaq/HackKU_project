@@ -18,7 +18,6 @@ func _process(delta):
 		WhiteCloud.position.x -= 1 + change
 
 func _on_area_2d_area_entered(area):
-	print(Global.score)
 	Global.score+=1
 	WhiteCloud.free()
 	

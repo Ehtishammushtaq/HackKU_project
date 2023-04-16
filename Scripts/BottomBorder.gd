@@ -12,8 +12,9 @@ func _process(delta):
 
 
 func _on_area_2d_area_entered(area):
-	Global.TopWallTouched = true
+	Global.BottomWallTouched=true
+	
 
 
 func _on_area_2d_area_exited(area):
-	Global.TopWallTouched = false
+	Global.BottomWallTouched=false
