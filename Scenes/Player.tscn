@@ -1,13 +1,83 @@
-[gd_scene load_steps=5 format=3 uid="uid://j0xnb5n1jj81"]
+[gd_scene load_steps=16 format=3 uid="uid://3bv5xwoscbb7"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_4fvmg"]
-[ext_resource type="Texture2D" uid="uid://b0g1r7jjrar1g" path="res://Assets/GliderDirectionSharp.png" id="2_3i8iy"]
+[ext_resource type="Texture2D" uid="uid://b0g1r7jjrar1g" path="res://Assets/TempAssets/GliderDirectionSharp.png" id="2_2mbq7"]
+[ext_resource type="Texture2D" uid="uid://c0jsn6hipunty" path="res://Assets/Down10.png" id="3_mmkl4"]
+[ext_resource type="Texture2D" uid="uid://t7tdmth6l4ba" path="res://Assets/Down20.png" id="4_qtejx"]
+[ext_resource type="Texture2D" uid="uid://bxyb3yryuq8v5" path="res://Assets/Down25.png" id="5_2a6f5"]
+[ext_resource type="Script" path="res://Scripts/PlayerMovement.gd" id="5_ola8h"]
+[ext_resource type="Texture2D" uid="uid://31h3thiyguoo" path="res://Assets/Down30.png" id="6_31tcc"]
+[ext_resource type="Texture2D" uid="uid://wr7lqxity1ud" path="res://Assets/Down50.png" id="7_v1l1i"]
+[ext_resource type="Texture2D" uid="uid://dxqws0pc4pat4" path="res://Assets/Up10.png" id="8_y75g4"]
+[ext_resource type="Texture2D" uid="uid://dbeeydxe560ax" path="res://Assets/Up20.png" id="9_3p0h7"]
+[ext_resource type="Texture2D" uid="uid://byljwsafd28fu" path="res://Assets/Up35.png" id="10_j88qm"]
+[ext_resource type="Texture2D" uid="uid://b7ds6kxfewn4p" path="res://Assets/TempAssets/GliderTransitionSharp.png" id="11_7on1t"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ym1tr"]
 radius = 840.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2py8e"]
 radius = 760.066
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6duoy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_mmkl4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qtejx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2a6f5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_31tcc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2a6f5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qtejx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_mmkl4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_v1l1i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_v1l1i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_v1l1i")
+}],
+"loop": true,
+"name": &"GoingDown",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_y75g4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_3p0h7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_j88qm")
+}],
+"loop": true,
+"name": &"GoingUp",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_7on1t")
+}],
+"loop": true,
+"name": &"IdleNoInput",
+"speed": 5.0
+}]
 
 [node name="Player" type="Node2D"]
 script = ExtResource("1_4fvmg")
@@ -24,9 +94,10 @@ position = Vector2(-70, -130)
 shape = SubResource("CircleShape2D_ym1tr")
 
 [node name="Sprite2D" type="Sprite2D" parent="Character"]
+visible = false
 position = Vector2(60, 0)
 scale = Vector2(7, 7)
-texture = ExtResource("2_3i8iy")
+texture = ExtResource("2_2mbq7")
 offset = Vector2(2.08165e-12, 2.08165e-12)
 
 [node name="Area2D" type="Area2D" parent="Character"]
@@ -36,3 +107,9 @@ collision_mask = 14
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Character/Area2D"]
 position = Vector2(-110, -80)
 shape = SubResource("CircleShape2D_2py8e")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Character"]
+scale = Vector2(7, 7)
+sprite_frames = SubResource("SpriteFrames_6duoy")
+animation = &"GoingUp"
+script = ExtResource("5_ola8h")

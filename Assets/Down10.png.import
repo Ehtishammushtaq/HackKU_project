@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0g1r7jjrar1g"
-path="res://.godot/imported/GliderDirectionSharp.png-b3a6ec273be981172fdbccb8c073f44a.ctex"
+uid="uid://c0jsn6hipunty"
+path="res://.godot/imported/Down10.png-e93a7b657c8ce37fbe36f30f984bf9e1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GliderDirectionSharp.png"
-dest_files=["res://.godot/imported/GliderDirectionSharp.png-b3a6ec273be981172fdbccb8c073f44a.ctex"]
+source_file="res://Assets/Down10.png"
+dest_files=["res://.godot/imported/Down10.png-e93a7b657c8ce37fbe36f30f984bf9e1.ctex"]
 
 [params]
 

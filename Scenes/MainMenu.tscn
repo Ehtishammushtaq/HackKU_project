@@ -20,6 +20,7 @@ texture = ExtResource("2_41xvq")
 
 [node name="NewGameOv" type="TextureRect" parent="."]
 z_index = 1
+layout_mode = 0
 offset_left = 195.0
 offset_top = 574.0
 offset_right = 701.0
@@ -29,6 +30,7 @@ texture = ExtResource("3_dia2o")
 
 [node name="SettingsOv" type="TextureRect" parent="."]
 z_index = 1
+layout_mode = 0
 offset_left = 193.0
 offset_top = 681.0
 offset_right = 685.0
@@ -38,6 +40,7 @@ texture = ExtResource("4_8s15u")
 
 [node name="ScoresOv" type="TextureRect" parent="."]
 z_index = 1
+layout_mode = 0
 offset_left = 183.0
 offset_top = 769.0
 offset_right = 693.0
@@ -47,6 +50,7 @@ texture = ExtResource("5_tv7ib")
 
 [node name="ExitOv" type="TextureRect" parent="."]
 z_index = 1
+layout_mode = 0
 offset_left = 185.0
 offset_top = 868.0
 offset_right = 671.0
