@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://d03v0ef8ureqf"]
+[gd_scene load_steps=3 format=3 uid="uid://xv5aqcmd018s"]
 
 [ext_resource type="Script" path="res://Scripts/SpringGameMusic.gd" id="1_sxibo"]
-[ext_resource type="AudioStream" uid="uid://bl6d327rkje8l" path="res://Assets/Sounds/SpringGamePlayMusic.mp3" id="2_4g3ca"]
+[ext_resource type="AudioStream" path="res://Assets/Sounds/SpringGamePlayMusic.mp3" id="2_4g3ca"]
 
 [node name="SpringGameMusic" type="Node2D"]
 script = ExtResource("1_sxibo")
