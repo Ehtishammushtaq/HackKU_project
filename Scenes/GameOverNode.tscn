@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://btmcmhmsk4vnx"]
 
 [ext_resource type="Script" path="res://Scripts/GameOverNode.gd" id="1_1ofie"]
-[ext_resource type="Texture2D" path="res://Assets/Game_over.png" id="1_7a852"]
+[ext_resource type="Texture2D" uid="uid://dv57mxxpxxl85" path="res://Assets/Game_over.png" id="1_7a852"]
 
 [node name="GameOverNode" type="Node2D"]
 script = ExtResource("1_1ofie")

@@ -21,3 +21,13 @@ func _unhandled_input(event):
 		get_tree().change_scene_to_file("res://Scenes/MainScene.tscn")
 	elif event.is_action_pressed("ui_cancel"):
 		get_tree().change_scene_to_file("res://Scenes/MainMenu.tscn")
+
+
+
+func _on_tree_exited():
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
+
+
+func _on_tree_entered():
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)

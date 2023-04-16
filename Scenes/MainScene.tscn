@@ -5,12 +5,12 @@
 [ext_resource type="PackedScene" uid="uid://j0xnb5n1jj81" path="res://Scenes/Player.tscn" id="2_55sfj"]
 [ext_resource type="PackedScene" uid="uid://dig6rhnsj6dn3" path="res://Scenes/WhiteCloudNode.tscn" id="3_in0vb"]
 [ext_resource type="PackedScene" uid="uid://dek7j2fpf5tfr" path="res://Scenes/BlackCloudNode.tscn" id="4_5ye32"]
-[ext_resource type="Texture2D" path="res://Assets/Cloud.png" id="6_6i1j8"]
+[ext_resource type="Texture2D" uid="uid://vsfbxelljoyf" path="res://Assets/Cloud.png" id="6_6i1j8"]
 [ext_resource type="PackedScene" uid="uid://cm4ogwkah2vkh" path="res://Scenes/TopBorder.tscn" id="6_opfwd"]
 [ext_resource type="PackedScene" uid="uid://dtfxuef4qscro" path="res://Scenes/BottomBorder.tscn" id="7_3frnl"]
 [ext_resource type="PackedScene" uid="uid://w6w2tmmlqaxg" path="res://Scenes/RightBorder.tscn" id="8_4sw7v"]
 [ext_resource type="PackedScene" uid="uid://xv5aqcmd018s" path="res://Scenes/SpringGameMusic.tscn" id="9_0nqv7"]
-[ext_resource type="PackedScene" path="res://Scenes/WhiteCloudDeath.tscn" id="10_3tkol"]
+[ext_resource type="PackedScene" uid="uid://d4jw47elph20j" path="res://Scenes/WhiteCloudDeath.tscn" id="10_3tkol"]
 [ext_resource type="PackedScene" uid="uid://bsxf6ktpqmq6y" path="res://Scenes/HealthNode.tscn" id="10_xfdcv"]
 
 [node name="MainScene" type="Node2D"]
@@ -65,5 +65,6 @@ position = Vector2(133, 92)
 
 [node name="CloudDeath" parent="." instance=ExtResource("10_3tkol")]
 
+[connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
 [connection signal="tree_exited" from="." to="." method="_on_tree_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -61,5 +61,10 @@ func spawn_black_clouds():
 
 
 func _on_tree_exited():
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	SpringGameMusic._springstop_music()
 
+
+
+func _on_tree_entered():
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)

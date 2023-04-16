@@ -19,3 +19,6 @@ offset_right = 1562.0
 offset_bottom = 1083.0
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_gvyyd")
+
+[connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
+[connection signal="tree_exited" from="." to="." method="_on_tree_exited"]
