@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6agksvialq2r"]
+
+[ext_resource type="Script" path="res://Scripts/ExitConfNode.gd" id="1_i0blv"]
+[ext_resource type="Texture2D" uid="uid://uyit7h6hnefv" path="res://Assets/TempAssets/ExitImageSized.jpg" id="2_nb1nm"]
+
+[node name="ExitConfNode" type="Node2D"]
+script = ExtResource("1_i0blv")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_nb1nm")
+
+[node name="YesButton" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 722.0
+offset_top = 568.0
+offset_right = 867.0
+offset_bottom = 694.0
+rotation = -0.0349066
+
+[node name="NoButton" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 876.0
+offset_top = 570.0
+offset_right = 1023.0
+offset_bottom = 686.0
+rotation = -0.0349066
+
+[connection signal="pressed" from="YesButton" to="." method="_on_yes_button_pressed"]
+[connection signal="pressed" from="NoButton" to="." method="_on_no_button_pressed"]

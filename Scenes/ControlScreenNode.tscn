@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dsb277mky58bh"]
 
 [ext_resource type="Script" path="res://Scripts/ControlScreenNode.gd" id="1_dxhnd"]
-[ext_resource type="Texture2D" uid="uid://ds2j8lyw0nlpt" path="res://Assets/TempAssets/ControlScreen.png" id="2_gft5c"]
+[ext_resource type="Texture2D" uid="uid://bn0qrgcsxi74b" path="res://Assets/TempAssets/ControlScreenPurple.png" id="2_k18dg"]
 
 [node name="ControlScreenNode" type="Node2D"]
 script = ExtResource("1_dxhnd")
@@ -9,4 +9,4 @@ script = ExtResource("1_dxhnd")
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("2_gft5c")
+texture = ExtResource("2_k18dg")

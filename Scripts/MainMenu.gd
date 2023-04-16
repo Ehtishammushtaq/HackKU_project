@@ -24,7 +24,7 @@ func _unhandled_input(event):
 
 func _on_exit_pressed():
 	# Replace with function body.
-	get_tree().quit(0)
+	get_tree().change_scene_to_file("res://Scenes/ExitConfNode.tscn")
 
 
 func _on_setting_pressed():
