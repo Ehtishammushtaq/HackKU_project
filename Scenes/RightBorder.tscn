@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bw8rwrqtbo8ie"]
+
+[ext_resource type="Script" path="res://Scripts/RightBorder.gd" id="1_hxuk8"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_xrqry"]
+a = Vector2(1920, 0)
+b = Vector2(1921, 1080)
+
+[node name="RightBorder" type="Node2D"]
+script = ExtResource("1_hxuk8")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("SegmentShape2D_xrqry")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

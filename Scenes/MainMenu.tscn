@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://cjjqscl8u06ho"]
+[gd_scene load_steps=7 format=3 uid="uid://cjjqscl8u06ho"]
 
 [ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="1_epj1j"]
 [ext_resource type="Texture2D" uid="uid://byqxvfibn3a2t" path="res://Assets/StartSceen.png" id="2_41xvq"]
+[ext_resource type="Texture2D" uid="uid://bn3n4alnqocto" path="res://Assets/NewGamePop.png" id="3_dia2o"]
+[ext_resource type="Texture2D" uid="uid://bgixtqqrapcac" path="res://Assets/SettingsPop.png" id="4_8s15u"]
+[ext_resource type="Texture2D" uid="uid://dyiprft8ycd3x" path="res://Assets/ScoresPop.png" id="5_tv7ib"]
+[ext_resource type="Texture2D" uid="uid://cpwkirns6wleo" path="res://Assets/ExitPop.png" id="6_m3b7g"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -13,6 +17,42 @@ layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_41xvq")
+
+[node name="NewGameOv" type="TextureRect" parent="."]
+z_index = 1
+offset_left = 195.0
+offset_top = 574.0
+offset_right = 701.0
+offset_bottom = 736.0
+scale = Vector2(0.6, 0.61)
+texture = ExtResource("3_dia2o")
+
+[node name="SettingsOv" type="TextureRect" parent="."]
+z_index = 1
+offset_left = 193.0
+offset_top = 681.0
+offset_right = 685.0
+offset_bottom = 819.0
+scale = Vector2(0.58209, 0.5)
+texture = ExtResource("4_8s15u")
+
+[node name="ScoresOv" type="TextureRect" parent="."]
+z_index = 1
+offset_left = 183.0
+offset_top = 769.0
+offset_right = 693.0
+offset_bottom = 941.0
+scale = Vector2(0.576066, 0.447831)
+texture = ExtResource("5_tv7ib")
+
+[node name="ExitOv" type="TextureRect" parent="."]
+z_index = 1
+offset_left = 185.0
+offset_top = 868.0
+offset_right = 671.0
+offset_bottom = 998.0
+scale = Vector2(0.572166, 0.5)
+texture = ExtResource("6_m3b7g")
 
 [node name="NewGame" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -50,6 +90,14 @@ offset_right = 478.0
 offset_bottom = 942.0
 rotation = -0.0122173
 
+[connection signal="mouse_entered" from="NewGameOv" to="." method="_on_new_game_ov_mouse_entered"]
+[connection signal="mouse_exited" from="NewGameOv" to="." method="_on_new_game_ov_mouse_exited"]
+[connection signal="mouse_entered" from="SettingsOv" to="." method="_on_settings_ov_mouse_entered"]
+[connection signal="mouse_exited" from="SettingsOv" to="." method="_on_settings_ov_mouse_exited"]
+[connection signal="mouse_entered" from="ScoresOv" to="." method="_on_scores_ov_mouse_entered"]
+[connection signal="mouse_exited" from="ScoresOv" to="." method="_on_scores_ov_mouse_exited"]
+[connection signal="mouse_entered" from="ExitOv" to="." method="_on_exit_ov_mouse_entered"]
+[connection signal="mouse_exited" from="ExitOv" to="." method="_on_exit_ov_mouse_exited"]
 [connection signal="pressed" from="NewGame" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="Setting" to="." method="_on_setting_pressed"]
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
