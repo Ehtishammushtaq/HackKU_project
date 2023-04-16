@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://j0xnb5n1jj81"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_4fvmg"]
-[ext_resource type="Texture2D" uid="uid://bd8sxvvvdmhql" path="res://Assets/glider.png" id="2_al0yh"]
+[ext_resource type="Texture2D" uid="uid://b0g1r7jjrar1g" path="res://Assets/GliderDirectionSharp.png" id="2_3i8iy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ym1tr"]
 radius = 840.0
@@ -25,8 +25,8 @@ shape = SubResource("CircleShape2D_ym1tr")
 
 [node name="Sprite2D" type="Sprite2D" parent="Character"]
 position = Vector2(60, 0)
-scale = Vector2(10, 10)
-texture = ExtResource("2_al0yh")
+scale = Vector2(7, 7)
+texture = ExtResource("2_3i8iy")
 offset = Vector2(2.08165e-12, 2.08165e-12)
 
 [node name="Area2D" type="Area2D" parent="Character"]

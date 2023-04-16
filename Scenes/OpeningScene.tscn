@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bb16tytlh8s7y"]
+
+[ext_resource type="Script" path="res://Scripts/OpeningScene.gd" id="1_nljuf"]
+[ext_resource type="Texture2D" uid="uid://blc8w7qnam8fv" path="res://Assets/opening_initial.png" id="2_wt865"]
+[ext_resource type="Texture2D" uid="uid://cvkay65j17026" path="res://Assets/Space.png" id="3_gvyyd"]
+
+[node name="OpeningScene" type="Node2D"]
+script = ExtResource("1_nljuf")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_wt865")
+
+[node name="Space" type="TextureRect" parent="."]
+offset_left = 765.0
+offset_top = 993.0
+offset_right = 1562.0
+offset_bottom = 1083.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_gvyyd")
