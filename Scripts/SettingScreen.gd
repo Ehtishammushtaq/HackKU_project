@@ -65,3 +65,7 @@ func _on_sound_mouse_entered():
 func _on_sound_mouse_exited():
 	var TW = create_tween().set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_IN_OUT)
 	TW.tween_property(Sounds, "scale", Vector2(1,1), 0.1)
+
+
+func _on_control_pressed():
+	get_tree().change_scene_to_file("res://Scenes/ControlScreenNode.tscn")
