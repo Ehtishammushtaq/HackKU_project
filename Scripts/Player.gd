@@ -6,7 +6,7 @@ extends Node2D
 
 var is_held = false
 var ychange=30
-var xchange=0.5
+var xchange=20
 # Called when the node enters the scene tree for the first time.
 
 func _ready():
@@ -29,5 +29,11 @@ func _process(delta):
 			TW.tween_property(Character, "position", Vector2(my_position.x, my_position.y+ychange), 0.01)
 	elif Input.is_action_pressed("ui_right"):
 		TW.tween_property(Character, "position", Vector2(my_position.x+xchange, my_position.y), 0.01)
+	elif Input.is_action_pressed("ui_left"):
+		var a = clamp((my_position.x-xchange), 10, 1700 )
+		if a==10:
+			pass
+		else:
+			TW.tween_property(Character, "position", Vector2(my_position.x-ychange, my_position.y), 0.01)
 	else:
-		TW.parallel().tween_property(Character, "position", Vector2(my_position.x+xchange, my_position.y), 0.01)
+		TW.parallel().tween_property(Character, "position", Vector2(my_position.x+xchange/10, my_position.y), 0.01)

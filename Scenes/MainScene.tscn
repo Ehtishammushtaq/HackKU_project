@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b101xch0p6lcy"]
+[gd_scene load_steps=11 format=3 uid="uid://b101xch0p6lcy"]
 
 [ext_resource type="PackedScene" uid="uid://br8nnfe7w5p5o" path="res://Scenes/Parallax.tscn" id="1_of0vv"]
 [ext_resource type="Script" path="res://Scripts/MainScene.gd" id="1_s4una"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cyo8um07qrhih" path="res://Scenes/BottomBorder.tscn" id="7_3frnl"]
 [ext_resource type="PackedScene" uid="uid://bw8rwrqtbo8ie" path="res://Scenes/RightBorder.tscn" id="8_4sw7v"]
 [ext_resource type="PackedScene" uid="uid://d03v0ef8ureqf" path="res://Scenes/SpringGameMusic.tscn" id="9_0nqv7"]
+[ext_resource type="PackedScene" uid="uid://6ww16j2p0um7" path="res://Scenes/HealthNode.tscn" id="10_xfdcv"]
 
 [node name="MainScene" type="Node2D"]
 script = ExtResource("1_s4una")
@@ -47,6 +48,9 @@ position = Vector2(-13, -36)
 position = Vector2(-20, -46)
 
 [node name="SpringGameMusic" parent="." instance=ExtResource("9_0nqv7")]
+
+[node name="HealthNode" parent="." instance=ExtResource("10_xfdcv")]
+position = Vector2(133, 92)
 
 [connection signal="tree_exited" from="." to="." method="_on_tree_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

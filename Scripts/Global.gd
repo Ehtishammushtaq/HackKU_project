@@ -1,7 +1,7 @@
 extends Node2D
 var score=0
 var WhiteCloudPosition
-var health = 0
+var health = 3
 var TopWallTouched=false
 var BottomWallTouched=false
 

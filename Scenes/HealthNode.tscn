@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://6ww16j2p0um7"]
+
+[ext_resource type="Script" path="res://Scripts/HealthNode.gd" id="1_r0hkq"]
+[ext_resource type="Texture2D" uid="uid://vsfbxelljoyf" path="res://Assets/Cloud.png" id="1_s1bcf"]
+
+[node name="HealthNode" type="Node2D"]
+script = ExtResource("1_r0hkq")
+
+[node name="OneHP" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 0.0627451, 1)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_s1bcf")
+
+[node name="TwoHP" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 0.0627451, 1)
+position = Vector2(145, 2)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_s1bcf")
+
+[node name="ThreeHP" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 0.0627451, 1)
+position = Vector2(294, 0.999996)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_s1bcf")
