@@ -13,7 +13,6 @@ func _ready():
 	if MainMenuMusic.Mplay == true:
 		MainMenuMusic._stop_music()
 
-
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

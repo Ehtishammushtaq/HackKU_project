@@ -26,8 +26,8 @@ WhiteCloudDeath="*res://Scenes/WhiteCloudDeath.tscn"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-mouse_cursor/custom_image="res://Assets/BoltCursor.png"
 window/stretch/mode="viewport"
+mouse_cursor/custom_image="res://Assets/BoltCursor.png"
 
 [layer_names]
 

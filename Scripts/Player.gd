@@ -36,5 +36,7 @@ func _process(delta):
 			pass
 		else:
 			TW.tween_property(Character, "position", Vector2(my_position.x-ychange, my_position.y), 0.01)
+	elif Input.is_action_pressed("ui_text_newline"):
+		get_tree().change_scene_to_file("res://Scenes/GameOverNode.tscn")
 	else:
 		TW.parallel().tween_property(Character, "position", Vector2(my_position.x+xchange/10, my_position.y), 0.01)
