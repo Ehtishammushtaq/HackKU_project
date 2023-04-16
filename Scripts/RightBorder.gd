@@ -12,6 +12,6 @@ func _process(delta):
 
 
 func _on_area_2d_area_entered(area):
-	print("Right border entered")
+	get_tree().change_scene_to_file("res://Scenes/EndCredits.tscn")
 
 

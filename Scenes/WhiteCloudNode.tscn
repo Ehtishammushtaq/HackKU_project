@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dig6rhnsj6dn3"]
 
 [ext_resource type="Script" path="res://Scripts/WhiteCloud.gd" id="1_ldhli"]
-[ext_resource type="Texture2D" uid="uid://b3ocfejkhxd7q" path="res://Assets/WC.png" id="2_v204c"]
+[ext_resource type="Texture2D" uid="uid://vsfbxelljoyf" path="res://Assets/Cloud.png" id="2_jo81u"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_72bfr"]
 radius = 147.354
@@ -20,7 +20,7 @@ scale = Vector2(0.790244, 0.711854)
 modulate = Color(1, 1, 1, 0.901961)
 position = Vector2(430, 286.906)
 scale = Vector2(0.76, 0.76)
-texture = ExtResource("2_v204c")
+texture = ExtResource("2_jo81u")
 offset = Vector2(2.08165e-12, 2.08165e-12)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WhiteCloud"]
