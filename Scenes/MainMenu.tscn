@@ -2,106 +2,106 @@
 
 [ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="1_epj1j"]
 [ext_resource type="Texture2D" uid="uid://byqxvfibn3a2t" path="res://Assets/StartSceen.png" id="2_41xvq"]
-[ext_resource type="Texture2D" uid="uid://bn3n4alnqocto" path="res://Assets/NewGamePop.png" id="3_dia2o"]
-[ext_resource type="Texture2D" uid="uid://bgixtqqrapcac" path="res://Assets/SettingsPop.png" id="4_8s15u"]
-[ext_resource type="Texture2D" uid="uid://dyiprft8ycd3x" path="res://Assets/ScoresPop.png" id="5_tv7ib"]
-[ext_resource type="Texture2D" uid="uid://cpwkirns6wleo" path="res://Assets/ExitPop.png" id="6_m3b7g"]
+[ext_resource type="Texture2D" path="res://Assets/NewGamePop.png" id="3_dia2o"]
+[ext_resource type="Texture2D" path="res://Assets/SettingsPop.png" id="4_8s15u"]
+[ext_resource type="Texture2D" path="res://Assets/ScoresPop.png" id="5_tv7ib"]
+[ext_resource type="Texture2D" path="res://Assets/ExitPop.png" id="6_m3b7g"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_epj1j")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_41xvq")
 
 [node name="NewGameOv" type="TextureRect" parent="."]
-z_index = 1
 layout_mode = 0
-offset_left = 195.0
-offset_top = 574.0
-offset_right = 701.0
-offset_bottom = 736.0
+offset_left = 193.0
+offset_top = 572.0
+offset_right = 699.0
+offset_bottom = 734.0
 scale = Vector2(0.6, 0.61)
 texture = ExtResource("3_dia2o")
 
 [node name="SettingsOv" type="TextureRect" parent="."]
-z_index = 1
 layout_mode = 0
-offset_left = 193.0
-offset_top = 681.0
-offset_right = 685.0
-offset_bottom = 819.0
+offset_left = 191.0
+offset_top = 679.0
+offset_right = 683.0
+offset_bottom = 817.0
 scale = Vector2(0.58209, 0.5)
 texture = ExtResource("4_8s15u")
 
-[node name="ScoresOv" type="TextureRect" parent="."]
-z_index = 1
+[node name="FunmodeOv" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 183.0
-offset_top = 769.0
-offset_right = 693.0
-offset_bottom = 941.0
+offset_left = 181.0
+offset_top = 767.0
+offset_right = 691.0
+offset_bottom = 939.0
 scale = Vector2(0.576066, 0.447831)
 texture = ExtResource("5_tv7ib")
 
 [node name="ExitOv" type="TextureRect" parent="."]
-z_index = 1
 layout_mode = 0
-offset_left = 185.0
-offset_top = 868.0
-offset_right = 671.0
-offset_bottom = 998.0
+offset_left = 183.0
+offset_top = 866.0
+offset_right = 669.0
+offset_bottom = 996.0
 scale = Vector2(0.572166, 0.5)
 texture = ExtResource("6_m3b7g")
 
 [node name="NewGame" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
+z_index = 1
 layout_mode = 0
-offset_left = 219.0
-offset_top = 589.0
-offset_right = 504.0
-offset_bottom = 657.0
-rotation = 0.0488692
-
-[node name="Scores" type="Button" parent="."]
-modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_left = 208.0
-offset_top = 772.0
-offset_right = 493.0
-offset_bottom = 840.0
+offset_left = 197.0
+offset_top = 574.0
+offset_right = 497.0
+offset_bottom = 654.0
 rotation = 0.0488692
 
 [node name="Setting" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
+z_index = 1
 layout_mode = 0
-offset_left = 211.0
-offset_top = 689.0
-offset_right = 489.0
-offset_bottom = 754.0
+offset_left = 195.0
+offset_top = 679.0
+offset_right = 476.0
+offset_bottom = 748.0
 rotation = -0.0122173
+
+[node name="FunMode" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+z_index = 1
+layout_mode = 0
+offset_left = 191.0
+offset_top = 765.0
+offset_right = 473.0
+offset_bottom = 833.0
+rotation = 0.0488692
 
 [node name="Exit" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0)
+z_index = 1
 layout_mode = 0
-offset_left = 200.0
-offset_top = 877.0
-offset_right = 478.0
-offset_bottom = 942.0
+offset_left = 181.0
+offset_top = 870.0
+offset_right = 461.0
+offset_bottom = 940.0
 rotation = -0.0122173
 
-[connection signal="mouse_entered" from="NewGameOv" to="." method="_on_new_game_ov_mouse_entered"]
-[connection signal="mouse_exited" from="NewGameOv" to="." method="_on_new_game_ov_mouse_exited"]
-[connection signal="mouse_entered" from="SettingsOv" to="." method="_on_settings_ov_mouse_entered"]
-[connection signal="mouse_exited" from="SettingsOv" to="." method="_on_settings_ov_mouse_exited"]
-[connection signal="mouse_entered" from="ScoresOv" to="." method="_on_scores_ov_mouse_entered"]
-[connection signal="mouse_exited" from="ScoresOv" to="." method="_on_scores_ov_mouse_exited"]
-[connection signal="mouse_entered" from="ExitOv" to="." method="_on_exit_ov_mouse_entered"]
-[connection signal="mouse_exited" from="ExitOv" to="." method="_on_exit_ov_mouse_exited"]
+[connection signal="mouse_entered" from="NewGame" to="." method="_on_new_game_mouse_entered"]
+[connection signal="mouse_exited" from="NewGame" to="." method="_on_new_game_mouse_exited"]
 [connection signal="pressed" from="NewGame" to="." method="_on_new_game_pressed"]
+[connection signal="mouse_entered" from="Setting" to="." method="_on_setting_mouse_entered"]
+[connection signal="mouse_exited" from="Setting" to="." method="_on_setting_mouse_exited"]
 [connection signal="pressed" from="Setting" to="." method="_on_setting_pressed"]
+[connection signal="mouse_entered" from="FunMode" to="." method="_on_fun_mode_mouse_entered"]
+[connection signal="mouse_exited" from="FunMode" to="." method="_on_fun_mode_mouse_exited"]
+[connection signal="mouse_entered" from="Exit" to="." method="_on_exit_mouse_entered"]
+[connection signal="mouse_exited" from="Exit" to="." method="_on_exit_mouse_exited"]
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
