@@ -11,6 +11,7 @@ offset_left = -5.0
 offset_top = 5.0
 offset_right = 1915.0
 offset_bottom = 1085.0
+scale = Vector2(0.995096, 0.998309)
 texture = ExtResource("2_nb1nm")
 
 [node name="YesButton" type="Button" parent="."]
