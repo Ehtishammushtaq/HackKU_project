@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://d4jw47elph20j"]
+
+[ext_resource type="Script" path="res://Scripts/WhiteSFX.gd" id="1_nouco"]
+[ext_resource type="AudioStream" uid="uid://b2fjq1txyqjen" path="res://SoundEffects/WhooshSoundEffectMedium.mp3" id="2_bl0vn"]
+[ext_resource type="AudioStream" uid="uid://d1d1ilb2jh48q" path="res://SoundEffects/ThunderPopBlackCloud.mp3" id="3_hn7b5"]
+
+[node name="WhiteCloudDeath" type="Node2D"]
+script = ExtResource("1_nouco")
+
+[node name="WhiteDeath" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_bl0vn")
+
+[node name="BlackDeath" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_hn7b5")
+volume_db = 15.0

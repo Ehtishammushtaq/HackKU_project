@@ -18,5 +18,7 @@ func _process(delta):
 
 func _on_area_2d_area_entered(area):
 	Global.health-=1
+	Global.score-=1
+	WhiteCloudDeath.bdeath_sound()
 	BlackCloud.free()
 	
