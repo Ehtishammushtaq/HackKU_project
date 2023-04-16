@@ -14,6 +14,7 @@ func _ready():
 		MainMenuMusic._stop_music()
 
 
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var my_string = str(Global.score)

@@ -1,16 +1,17 @@
-[gd_scene load_steps=12 format=3 uid="uid://b101xch0p6lcy"]
+[gd_scene load_steps=13 format=3 uid="uid://b101xch0p6lcy"]
 
 [ext_resource type="PackedScene" uid="uid://br8nnfe7w5p5o" path="res://Scenes/Parallax.tscn" id="1_of0vv"]
 [ext_resource type="Script" path="res://Scripts/MainScene.gd" id="1_s4una"]
-[ext_resource type="PackedScene" uid="uid://3bv5xwoscbb7" path="res://Scenes/Player.tscn" id="2_55sfj"]
+[ext_resource type="PackedScene" uid="uid://j0xnb5n1jj81" path="res://Scenes/Player.tscn" id="2_55sfj"]
 [ext_resource type="PackedScene" uid="uid://dig6rhnsj6dn3" path="res://Scenes/WhiteCloudNode.tscn" id="3_in0vb"]
 [ext_resource type="PackedScene" uid="uid://dek7j2fpf5tfr" path="res://Scenes/BlackCloudNode.tscn" id="4_5ye32"]
+[ext_resource type="Texture2D" uid="uid://vsfbxelljoyf" path="res://Assets/Cloud.png" id="6_6i1j8"]
 [ext_resource type="PackedScene" uid="uid://cm4ogwkah2vkh" path="res://Scenes/TopBorder.tscn" id="6_opfwd"]
 [ext_resource type="PackedScene" uid="uid://cyo8um07qrhih" path="res://Scenes/BottomBorder.tscn" id="7_3frnl"]
 [ext_resource type="PackedScene" uid="uid://bw8rwrqtbo8ie" path="res://Scenes/RightBorder.tscn" id="8_4sw7v"]
-[ext_resource type="PackedScene" uid="uid://ckix3s185sesy" path="res://Scenes/SpringGameMusic.tscn" id="9_0nqv7"]
-[ext_resource type="PackedScene" uid="uid://d4jw47elph20j" path="res://Scenes/WhiteCloudDeath.tscn" id="10_3tkol"]
-[ext_resource type="PackedScene" path="res://Scenes/HealthNode.tscn" id="10_xfdcv"]
+[ext_resource type="PackedScene" uid="uid://d03v0ef8ureqf" path="res://Scenes/SpringGameMusic.tscn" id="9_0nqv7"]
+[ext_resource type="PackedScene" path="res://Scenes/WhiteCloudDeath.tscn" id="10_3tkol"]
+[ext_resource type="PackedScene" uid="uid://6ww16j2p0um7" path="res://Scenes/HealthNode.tscn" id="10_xfdcv"]
 
 [node name="MainScene" type="Node2D"]
 script = ExtResource("1_s4una")
@@ -27,11 +28,20 @@ position = Vector2(2455, 650)
 z_index = 1
 position = Vector2(28, 72)
 
+[node name="ScoreIcon" type="TextureRect" parent="."]
+modulate = Color(0.109804, 1, 0.27451, 0.607843)
+offset_left = 1635.0
+offset_top = 6.0
+offset_right = 2243.0
+offset_bottom = 416.0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("6_6i1j8")
+
 [node name="Score" type="RichTextLabel" parent="."]
-offset_left = 1713.0
-offset_top = 22.0
-offset_right = 1912.0
-offset_bottom = 206.0
+offset_left = 1720.0
+offset_top = 50.0
+offset_right = 1919.0
+offset_bottom = 234.0
 theme_override_font_sizes/normal_font_size = 70
 text = "0"
 

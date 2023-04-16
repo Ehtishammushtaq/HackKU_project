@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://cbwx0ujuo6lib"]
+[gd_scene load_steps=3 format=3 uid="uid://bug3tdcq03jpa"]
 
 [ext_resource type="Script" path="res://Scripts/MainMenuMusic.gd" id="1_pd1rq"]
 [ext_resource type="AudioStream" uid="uid://bccl7ma422u0s" path="res://Assets/Sounds/MenuMusic.mp3" id="1_s8l4l"]

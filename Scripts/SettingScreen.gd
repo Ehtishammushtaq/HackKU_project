@@ -17,3 +17,7 @@ func _on_back_pressed():
 
 func _on_credits_pressed():
 	get_tree().change_scene_to_file("res://Scenes/EndCredits.tscn")
+	
+func _unhandled_input(event):
+	if event.is_action_pressed("ui_cancel"):
+		get_tree().change_scene_to_file("res://Scenes/MainMenu.tscn")
