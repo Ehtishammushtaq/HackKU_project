@@ -9,12 +9,9 @@ func _ready():
 	randomize()
 	Global.health =3
 	Global.score =0
+	SpringGameMusic._springplay_music()
 	if MainMenuMusic.Mplay == true:
 		MainMenuMusic._stop_music()
-		SpringGameMusic._springplay_music()
-	else:
-		MainMenuMusic._play_music()
-
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

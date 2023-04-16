@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var Whoosh : AudioStreamPlayer2D = $WhiteDeath
 @onready var Whoosh2 : AudioStreamPlayer2D = $BlackDeath
+@onready var Opening : AudioStreamPlayer2D = $OpeningExplosion
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -15,3 +16,6 @@ func death_sound():
 
 func bdeath_sound():
 	Whoosh2.play()
+	
+func opening_sound():
+	Opening.play()
