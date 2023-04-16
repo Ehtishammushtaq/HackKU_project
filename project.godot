@@ -13,7 +13,9 @@ config_version=5
 config/name="MeadowBrook"
 run/main_scene="res://Scenes/MainMenu.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
-config/icon="res://Assets/TempAssets/GliderNeutralCurve.png"
+config/icon="res://GliderIcon.png"
+config/macos_native_icon="res://GliderIcon.png"
+config/windows_native_icon="res://GliderIcon.png"
 
 [autoload]
 
@@ -26,8 +28,8 @@ WhiteCloudDeath="*res://Scenes/WhiteCloudDeath.tscn"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/stretch/mode="viewport"
 mouse_cursor/custom_image="res://Assets/BoltCursor.png"
+window/stretch/mode="viewport"
 
 [layer_names]
 
