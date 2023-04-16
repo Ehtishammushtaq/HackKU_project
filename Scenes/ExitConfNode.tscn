@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://c6agksvialq2r"]
+[gd_scene load_steps=3 format=3 uid="uid://ditrq3kxerys6"]
 
 [ext_resource type="Script" path="res://Scripts/ExitConfNode.gd" id="1_i0blv"]
 [ext_resource type="Texture2D" uid="uid://uyit7h6hnefv" path="res://Assets/TempAssets/ExitImageSized.jpg" id="2_nb1nm"]
@@ -7,8 +7,10 @@
 script = ExtResource("1_i0blv")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -5.0
+offset_top = 5.0
+offset_right = 1915.0
+offset_bottom = 1085.0
 texture = ExtResource("2_nb1nm")
 
 [node name="YesButton" type="Button" parent="."]

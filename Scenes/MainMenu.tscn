@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cjjqscl8u06ho"]
 
 [ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="1_epj1j"]
-[ext_resource type="Texture2D" uid="uid://byqxvfibn3a2t" path="res://Assets/StartSceen.png" id="2_41xvq"]
+[ext_resource type="Texture2D" uid="uid://8xxlinn6b0ep" path="res://Assets/BackgroundMain.jpg" id="2_wlv25"]
 [ext_resource type="Texture2D" uid="uid://bn3n4alnqocto" path="res://Assets/NewGamePop.png" id="3_dia2o"]
 [ext_resource type="Texture2D" uid="uid://bgixtqqrapcac" path="res://Assets/SettingsPop.png" id="4_8s15u"]
 [ext_resource type="Texture2D" uid="uid://dyiprft8ycd3x" path="res://Assets/ScoresPop.png" id="5_tv7ib"]
@@ -16,7 +16,7 @@ script = ExtResource("1_epj1j")
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("2_41xvq")
+texture = ExtResource("2_wlv25")
 
 [node name="NewGameOv" type="TextureRect" parent="."]
 layout_mode = 0

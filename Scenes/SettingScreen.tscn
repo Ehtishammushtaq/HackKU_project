@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://c8d7s8hi0lqev"]
 
 [ext_resource type="Script" path="res://Scripts/SettingScreen.gd" id="1_dg5ts"]
-[ext_resource type="Texture2D" uid="uid://b0bypilm5r0wt" path="res://Assets/TempAssets/Try2OnlyBG.png" id="2_m21cn"]
+[ext_resource type="Texture2D" uid="uid://8xxlinn6b0ep" path="res://Assets/BackgroundMain.jpg" id="2_8df7v"]
 [ext_resource type="Texture2D" uid="uid://6dv1al4xfasc" path="res://Assets/SoundsPop.png" id="3_ffyqp"]
 [ext_resource type="Texture2D" uid="uid://dy0ju8tsv4li4" path="res://Assets/ControlsPop.png" id="4_n5ur7"]
 [ext_resource type="Texture2D" uid="uid://bfaymoa04wi8w" path="res://Assets/CreditsPop.png" id="5_1taw1"]
@@ -14,11 +14,9 @@ script = ExtResource("1_dg5ts")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 5.0
-offset_top = -1.0
-offset_right = 1937.0
-offset_bottom = 1079.0
-texture = ExtResource("2_m21cn")
+offset_right = 1932.0
+offset_bottom = 1080.0
+texture = ExtResource("2_8df7v")
 expand_mode = 2
 stretch_mode = 4
 

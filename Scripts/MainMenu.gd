@@ -20,7 +20,7 @@ func _on_new_game_pressed():
 
 func _unhandled_input(event):
 	if event.is_action_pressed("ui_cancel"):
-		get_tree().quit(0)
+		get_tree().change_scene_to_file("res://Scenes/ExitConfNode.tscn")
 
 func _on_exit_pressed():
 	# Replace with function body.
@@ -67,11 +67,4 @@ func _on_exit_mouse_entered():
 func _on_exit_mouse_exited():
 	var TW = create_tween().set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_IN_OUT)
 	TW.tween_property(Exit, "scale",Vector2(0.572,0.5) , 0.1)
-
-
-
-
-
-
-
 
