@@ -17,9 +17,9 @@ func _ready():
 func _process(delta):
 	var my_position = Character.position
 	var TW = create_tween().set_trans(Tween.TRANS_LINEAR).set_ease(Tween.EASE_IN_OUT)
-	TW.tween_property(Character, "position", Vector2(my_position.x+xchange, my_position.y), 0.01)
 	animated_sprite.play("IdleNoInput")
-
+	if Global.RightWallTouched == false:
+		TW.tween_property(Character, "position", Vector2(my_position.x+xchange, my_position.y), 0.01)
 	if Input.is_action_pressed("ui_up"):
 		animated_sprite.play("GoingUp")
 		if Global.TopWallTouched == false:
@@ -28,8 +28,10 @@ func _process(delta):
 		animated_sprite.play("GoingDown")
 		if Global.BottomWallTouched== false:
 			TW.tween_property(Character, "position", Vector2(my_position.x, my_position.y+ychange), 0.01)
+			
 	elif Input.is_action_pressed("ui_right"):
-		TW.tween_property(Character, "position", Vector2(my_position.x+xchange, my_position.y), 0.01)
+		if Global.RightWallTouched == false:
+			TW.tween_property(Character, "position", Vector2(my_position.x+xchange, my_position.y), 0.01)
 	elif Input.is_action_pressed("ui_left"):
 		var a = clamp((my_position.x-xchange), 10, 1700 )
 		if a==10:
@@ -39,4 +41,5 @@ func _process(delta):
 	elif Input.is_action_pressed("ui_text_newline"):
 		get_tree().change_scene_to_file("res://Scenes/GameOverNode.tscn")
 	else:
-		TW.parallel().tween_property(Character, "position", Vector2(my_position.x+xchange/10, my_position.y), 0.01)
+		if Global.RightWallTouched == false:
+			TW.parallel().tween_property(Character, "position", Vector2(my_position.x+xchange/10, my_position.y), 0.01)
